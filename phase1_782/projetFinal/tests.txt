@@ -1,0 +1,132 @@
+let a = Noeud (Noeud (Noeud (Noeud Vide (0,2) Vide) (5,6) Vide) (8,8) (Noeud Vide (12,36) (Noeud Vide (42,45) Vide))) (50,75) (Noeud (Noeud Vide (80,83) Vide) (85,89) Vide)
+
+Arbre initial:
+			 [50,75]
+                           /  \
+                          /    \
+                         /      \
+		     [8,8]      [85,89]
+                      /\           /
+                     /  \         /
+                    /    \       /
+		[5,6] [12,36] [80,83]
+                  /         \
+                 /           \
+                /             \
+	      [0,2]          [42,45]
+
+Test des fonctions:
+->*Main> rechercher a 25
+True
+*Main> 
+
+->-*Main> rechercher a 48
+False
+*Main> 
+
+->*Main> imprimer a
+"[0,2][5,6][8,8][12,36][42,45][50,75][80,83][85,89]"
+*Main> 
+
+*Main> taille a 
+8
+*Main> 
+
+*Main> tailleReelle a
+62
+*Main>
+
+*Main> inserer a 84
+Noeud (Noeud (Noeud (Noeud Vide (0,2) Vide) (5,6) Vide) (8,8) (Noeud Vide (12,36) (Noeud Vide (42,45) Vide))) (50,75) (Noeud Vide (80,89) Vide)
+*Main>
+
+                          [50,75]
+                           /  \
+                          /    \
+                         /      \
+		     [8,8]      [80,89]
+                      /\          
+                     /  \         
+                    /    \       
+		[5,6] [12,36] 
+                  /         \
+                 /           \
+                /             \
+	      [0,2]          [42,45]
+
+*Main> supprimer a 60
+Noeud (Noeud (Noeud (Noeud Vide (0,2) Vide) (5,6) Vide) (8,8) (Noeud Vide (12,36) (Noeud Vide (42,45) Vide))) (50,59) (Noeud Vide (61,75) (Noeud (Noeud Vide (80,83) Vide) (85,89) Vide))
+*Main> 
+
+                          [50,59]
+                           /  \
+                          /    \
+                         /      \
+		     [8,8]      [61,75]
+                      /\           \
+                     /  \           \
+                    /    \           \
+		[5,6] [12,36]       [85,89]
+                  /         \           /
+                 /           \         /
+                /             \       /
+	      [0,2]          [42,45] [80,83]
+
+*Main> insererListe a [84,7,91,37]
+Noeud (Noeud (Noeud Vide (0,2) Vide) (5,8) (Noeud Vide (12,37) (Noeud Vide (42,45) Vide))) (50,75) (Noeud Vide (80,89) (Noeud Vide (91,91) Vide))
+*Main> 
+
+
+
+                          [50,75]
+                           /  \
+                          /    \
+                         /      \
+		     [5,8]      [80,89]
+                      /\           \
+                     /  \           \
+                    /    \           \
+		[0,2] [12,37]       [91,91]
+                            \          
+                             \         
+                              \       
+	                   [42,45] 
+
+*Main> insererIntervalle a 25 55
+Noeud (Noeud (Noeud Vide (0,2) Vide) (5,6) Vide) (12,75) (Noeud (Noeud Vide (80,83) Vide) (85,89) Vide)
+*Main>
+
+
+                        
+                         [12,75]
+                           /  \
+                          /    \
+                         /      \
+		     [8,8]      [85,89]
+                      /            /
+                     /            /
+                    /            /
+		[5,6]         [80,83]
+                  /         
+                 /          
+                /             
+	      [0,2]          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
